@@ -6,10 +6,9 @@ require 'rails_admin_link_to_edit/version'
 Gem::Specification.new do |spec|
   spec.name          = "rails_admin_link_to_edit"
   spec.version       = RailsAdminLinkToEdit::VERSION
-  spec.authors       = ["redCashion"]
-  spec.email         = ["xperts@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.authors       = ["Jeremy Smith"]
+  spec.email         = ["jeremy@superplussed.com"]
+  spec.summary       = %q{Standardize linking from a resource list to edit and show pages}
   spec.homepage      = ""
   spec.license       = "MIT"
 

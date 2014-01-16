@@ -1,5 +1,3 @@
 require "rails_admin_link_to_edit/version"
-
-module RailsAdminLinkToEdit
-  # Your code goes here...
-end
+require "rails_admin_link_to_edit/field"
+require "rails_admin_link_to_edit/engine"
