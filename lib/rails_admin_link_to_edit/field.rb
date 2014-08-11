@@ -4,7 +4,7 @@ module RailsAdmin
     module Fields
       module Types
         class LinkToEdit < RailsAdmin::Config::Fields::Base
-          
+
           RailsAdmin::Config::Fields::Types::register(self)
           include RailsAdmin::Engine.routes.url_helpers
 
@@ -14,9 +14,11 @@ module RailsAdmin
             str << "<a class='show-link' href='/admin/#{@abstract_model.to_s.underscore}/#{bindings[:object].id}'>"
             str << "<i class='icon-info-sign'></i>View"
             str << "</a>"
-            str << "<a class='edit-link' href='/admin/#{@abstract_model.to_s.underscore}/#{bindings[:object].id}/edit'>"
-            str << "<i class='icon-edit'></i>Edit"
-            str << "</a>"
+            if bindings[:view].authorized?(:edit, @abstract_model)
+              str << "<a class='edit-link' href='/admin/#{@abstract_model.to_s.underscore}/#{bindings[:object].id}/edit'>"
+              str << "<i class='icon-edit'></i>Edit"
+              str << "</a>"
+            end
             str.html_safe
            end
 
